@@ -1,7 +1,7 @@
 **On this page:**
 How the API reports errors and how clients should interpret them.
 
-> [!NOTE] Error handling is consistent across all endpoints and aligned with the authentication, validation, and business rules described in previous sections
+> Error handling is consistent across all endpoints and aligned with the authentication, validation, and business rules described in previous sections
 
 ## Error response format
 
