@@ -3,6 +3,7 @@ API features, use cases, authentication, and authorization summary.
 
 **Not covered:**
 Full authentication flow, detailed business rules, validation logic, advanced error handling, and edge cases.
+
 # Introduction
 
 The **Smart Meeting Room Booking API** is a RESTful API for managing meeting room reservations. It allows to confirm bookings or get a list of available rooms.
