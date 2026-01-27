@@ -46,6 +46,7 @@ validates the request, selects a room (only in the "Create a booking" use case),
 Create a booking
 
 **Flow:**
+```
 Client
    |
    |   POST /bookings
@@ -60,6 +61,7 @@ API
   |     Apply business rules
  ▼
 Response
+```
 
 **Result:** 
 Booking is either **confirmed** or **rejected**
@@ -70,6 +72,7 @@ Booking is either **confirmed** or **rejected**
 Find all available rooms
 
 **Flow:**
+```
 Client
    |
    |  GET /bookings
@@ -81,6 +84,7 @@ API
   |   Apply business rules 
  ▼
 Response
+```
 
 **Result:**
 API returns a list of available rooms (may be empty)
@@ -90,4 +94,4 @@ API returns a list of available rooms (may be empty)
 The **Smart Meeting Room Booking API** uses an **external IdP** for authentication. It does not handle credentials or issue tokens. The API accepts **Bearer tokens** via OAuth 2.0 and enforces **scope-based authorization** for client requests.
 
 Authentication is required.
-See [authentication](obsidian://open?vault=Obsidian%20Vault&file=Tech%20writing%2FPortfolio%2FSmart%20Meeting%20Room%20Booking%20API%2FDocs%20for%20GitHub%2FGetting%20started%2F4.%20authentication) for details.
+See [Authentication](authentication.md) for details.
