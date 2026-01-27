@@ -50,16 +50,16 @@ Create a booking
 Client
    |
    |   POST /bookings
-  ▼
-API
-  |	 Validate token
-  |    Validate request data: start time, end time, room id (optional)
-  |    Select room
-  |        - If the room id is specified, use it
-  |        - Otherwise, automatically select a suitable room
-  |     Check conflicts
-  |     Apply business rules
- ▼
+   ▼
+  API
+   |	 Validate token
+   |    Validate request data: start time, end time, room id (optional)
+   |    Select room
+   |        - If the room id is specified, use it
+   |        - Otherwise, automatically select a suitable room
+   |     Check conflicts
+   |     Apply business rules
+   ▼
 Response
 ```
 
@@ -76,13 +76,13 @@ Find all available rooms
 Client
    |
    |  GET /bookings
-  ▼
-API
-  |	Validate token
-  |   Validate request data: start time, end time
-  |   Check conflicts
-  |   Apply business rules 
- ▼
+   ▼
+  API
+   |	Validate token
+   |   Validate request data: start time, end time
+   |   Check conflicts
+   |   Apply business rules 
+   ▼
 Response
 ```
 
