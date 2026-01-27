@@ -6,7 +6,7 @@ Explanation of how the system applies business rules using the core domain conce
 - Technical error handling
 
 
-> [!NOTE] Notes
+> Notes
 > 1. All business rules are enforced server-side
 > 2. Client-side validation is optional and should be considered advisory only
 
