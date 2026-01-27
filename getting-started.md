@@ -14,7 +14,7 @@ Base URL for all API requests: `https://api.smart-meeting-room-booking.com/v1`
 - The API does not manage credentials or issue tokens
 - Access is controlled using scope-based authorization
 
-See [Authentication](https://auth0.com/docs/secure/tokens/access-tokens/identity-provider-access-tokens) for details.
+See [Authentication](authentication.md) for details.
 
 # Minimal request flow
 
