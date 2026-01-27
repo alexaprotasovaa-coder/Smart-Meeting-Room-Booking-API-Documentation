@@ -8,6 +8,7 @@
 - Authorization errors (401 UNAUTHORIZED, 403 INSUFFICIENT_SCOPE)
 - Business logic, conflict handling, or booking priority rules
 - Any HTTP methods, successful response codes, or actual API endpoints
+
 # Request validation
 
 Request validation ensures the structural and logical correctness of requests and is performed before business rules are evaluated.
