@@ -81,3 +81,6 @@ A **Client** is an application or system that interacts with the API on behalf o
 - An internal service or integration
 
 All API interactions are performed by clients, not end users directly.
+
+→ Read next [Authentication](https://github.com/alexaprotasovaa-coder/Smart-Meeting-Room-Booking-API-Documentation/blob/docs-update/authentication.md)
+
