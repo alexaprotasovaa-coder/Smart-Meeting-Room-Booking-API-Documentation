@@ -62,3 +62,4 @@ Response (Error, 409 Conflict)
   "message": "The requested time slot overlaps with an existing booking."
 }
 ```
+→ Read next [Concepts](https://github.com/alexaprotasovaa-coder/Smart-Meeting-Room-Booking-API-Documentation/blob/docs-update/concepts.md)
