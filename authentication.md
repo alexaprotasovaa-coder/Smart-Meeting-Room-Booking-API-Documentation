@@ -65,9 +65,13 @@ The API uses standard HTTP status codes to indicate authentication and authoriza
 | **Status Code** | Error code         | **Description**                      |
 | --------------- | ------------------ | ------------------------------------ |
 | 401             | UNAUTHORIZED       | Missing or invalid access token      |
+| 401             | TOKEN_EXPIRED      | Expired access token                 |
 | 403             | INSUFFICIENT_SCOPE | Missing required authorization scope |
+| 403             | INVALID_REQUEST    | Missing or invalid required fields   |
 
-## Error response examples
+> Full list of error codes and examples is in the [Error page](https://github.com/alexaprotasovaa-coder/Smart-Meeting-Room-Booking-API-Documentation/blob/docs-update/errors.md#error-lifecycle)
+
+## Error request and response examples
 
 **Missing token:**
 ```json
