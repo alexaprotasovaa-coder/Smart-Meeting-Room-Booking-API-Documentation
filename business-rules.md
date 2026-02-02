@@ -43,7 +43,6 @@ A **conflict** occurs when two bookings request the same room for overlapping ti
 The system automatically:
 - Selects a suitable room during booking creation
 - Evaluates availability and detects conflicts
-- Returns the same result for repeated idempotent requests
 
 Depending on the operation:
 - Room search returns a list of available rooms
