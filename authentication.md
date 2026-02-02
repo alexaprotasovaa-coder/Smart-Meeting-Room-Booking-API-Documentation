@@ -82,11 +82,11 @@ Content-Type: application/json
  {
 	"error": {
 		"code": "UNAUTHORIZED",
-	    "message": "Access token is missing or invalid."
+	    "message": "Access token is missing or invalid"
 	}
 }
 ```
-> A valid token does not guarantee access; the required scope must be present.
+> A valid token does not guarantee access; the required scope must be present
 
 **Expired token:**
 ```HTTP
@@ -97,7 +97,7 @@ Content-Type: application/json
 {
 	"error": {
 	    "code": "TOKEN_EXPIRED",
-	    "message": "The access token has expired. Please obtain a new token and retry the request."
+	    "message": "The access token has expired. Please obtain a new token and retry the request"
 	}
 }
 ```
@@ -111,7 +111,7 @@ Content-Type: application/json
 {
 	"error": {
 		"code": "INSUFFICIENT_SCOPE",
-		"message": "The access token does not include the required scope: bookings:write."
+		"message": "The access token does not include the required scope: bookings:write"
 	}
 }
 ```
@@ -133,7 +133,7 @@ Content-Type: application/json
 {
   "error": {
     "code": "INVALID_REQUEST",
-    "message": "Required fields are missing or invalid: roomId, startTime, endTime."
+    "message": "Required fields are missing or invalid: roomId, startTime, endTime"
   }
 }
 ```
