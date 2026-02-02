@@ -49,6 +49,8 @@ Validation failures are mapped to standard HTTP status codes.
 | 400         | INVALID_REQUEST  | Missing or invalid required field    |
 | 400         | VALIDATION_ERROR | Field-level validation failure       |
 
+> Full list of error codes and messages is in the [Error page](errors.md)
+
 ## Error response examples
 
 **Validation error:**
