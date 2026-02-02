@@ -108,3 +108,5 @@ Domain-specific errors reflect booking logic, policies, and time constraints.
 	}
 }
 ```
+
+→ Read next [Changelog](сhangelog.md)
