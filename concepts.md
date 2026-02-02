@@ -87,10 +87,10 @@ All API interactions are performed by clients, not end users directly.
 Capacity defines the maximum number of participants a room can accommodate.
 
 **Features:**
-	•	Is associated with a specific room
-	•	Limits the number of participants in a booking
-	•	Is used to validate booking requests before creation
-	•	Exceeding a room’s capacity results in a CAPACITY_EXCEEDED error
+- Is associated with a specific room
+- Limits the number of participants in a booking
+- Is used to validate booking requests before creation
+- Exceeding a room’s capacity results in a CAPACITY_EXCEEDED error
 
 Capacity ensures that bookings are feasible and safe for the intended number of attendees.
 
