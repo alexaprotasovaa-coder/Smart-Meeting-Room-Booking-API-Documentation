@@ -108,11 +108,3 @@ Domain-specific errors reflect booking logic, policies, and time constraints.
 	}
 }
 ```
-
-## Error handling principles
-
-- Errors are deterministic and repeatable for the same request
-- Only one error is returned per request
-- Validation errors take precedence over business rules
-- Business rule errors take precedence over conflict resolution
-- Error codes are stable and backward-compatible
