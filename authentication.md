@@ -64,7 +64,7 @@ The API uses standard HTTP status codes to indicate authentication and authoriza
 
 | **Status Code** | Error code         | **Description**                      |
 | --------------- | ------------------ | ------------------------------------ |
-|                 | INVALID_REQUEST    | Missing or invalid required fields   |
+| 400             | INVALID_REQUEST    | Missing or invalid required field   |
 | 401             | UNAUTHORIZED       | Missing or invalid access token      |
 | 401             | TOKEN_EXPIRED      | Expired access token                 |
 | 403             | INSUFFICIENT_SCOPE | Missing required authorization scope |
