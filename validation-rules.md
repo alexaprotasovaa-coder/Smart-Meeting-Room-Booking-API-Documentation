@@ -68,3 +68,5 @@ Validation failures are mapped to standard HTTP status codes.
   "message": "Malformed JSON payload or missing required fields: roomId, startTime, endTime"
 }
 ```
+
+→ Read next [Business rules](business-rules.md)
