@@ -132,3 +132,5 @@ Accept booking      Detect time overlap
                 v                   v                   v
 	    Accept booking    Reject booking    Earlier booking takes precedence
 ```
+
+→ Read next [Errors](errors.md)
