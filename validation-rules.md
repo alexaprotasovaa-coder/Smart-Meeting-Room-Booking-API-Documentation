@@ -23,30 +23,14 @@ Request validation ensures the structural and logical correctness of requests an
 
 > All request payloads must be valid JSON and use UTF-8 encoding.
 
-| **Field**    | **Required / Optional** | **Data format** | **Example**             | **Validation rules**                                | **Business rules impact**                    |
-| ------------ | ----------------------- | --------------- | ----------------------- | --------------------------------------------------- | -------------------------------------------- |
-| roomId       | Required                | string          | room-101                | Must reference an existing room ID                  | Used for room selection, availability checks |
-| startTime    | Required                | ISO 8601 UTC    | 2026-01-15T10:00:00Z    | Must be earlier than endTime; cannot be in the past | Conflict detection, time constraints         |
-| endTime      | Required                | ISO 8601 UTC    | 2026-01-15T11:00:00Z    | Must be later than startTime; cannot be in the past | Conflict detection, time constraints         |
-| title        | Optional                | string          | Team Meeting            | Max length 255 characters                           | Display only; no effect on business rules    |
-| description  | Optional                | string          | Discuss project roadmap | Max length 1024 characters                          | Display only; no effect on business rules    |
-| participants | Optional                | integer         | 5                       | Must not exceed room capacity                       | Capacity check for room selection            |
-
-# Supported data formats
-
-> Data format includes both the data type and, where applicable, a specific format (e.g., ISO 8601 for dates)
-
-- `string`
-- `integer`
-- `boolean`
-- `array`
-- `object`
-- `ISO 8601` date-time strings
-
-**Examples:**
-- `roomId: string`  
-- `participants: integer`  
-- `startTime: ISO 8601` (e.g. `2026-01-15T10:00:00Z`)  
+| **Field**    | **Required / Optional** | **Data format** | **Example**             | **Validation rules**                                |
+| ------------ | ----------------------- | --------------- | ----------------------- | --------------------------------------------------- |
+| roomId       | Required                | string          | room-101                | Must reference an existing room ID                  |
+| startTime    | Required                | ISO 8601 UTC    | 2026-01-15T10:00:00Z    | Must be earlier than endTime; cannot be in the past |
+| endTime      | Required                | ISO 8601 UTC    | 2026-01-15T11:00:00Z    | Must be later than startTime; cannot be in the past |
+| title        | Optional                | string          | Team Meeting            | Max length 255 characters                           |
+| description  | Optional                | string          | Discuss project roadmap | Max length 1024 characters                          |
+| participants | Optional                | integer         | 5                       | Must not exceed room capacity                       |
 
 # Time validation rules
 
