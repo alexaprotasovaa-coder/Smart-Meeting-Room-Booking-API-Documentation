@@ -138,3 +138,4 @@ Content-Type: application/json
 }
 ```
 
+→ Read next [Validation rules](https://github.com/alexaprotasovaa-coder/Smart-Meeting-Room-Booking-API-Documentation/blob/docs-update/validation-rules.md)
