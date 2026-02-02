@@ -46,7 +46,7 @@ Validation failures are mapped to standard HTTP status codes.
 
 | Status code | Error code       | Description                          |
 | ----------- | ---------------- | ------------------------------------ |
-| 400         | INVALID_REQUEST  | Malformed or invalid request payload |
+| 400         | INVALID_REQUEST  | Missing or invalid required field    |
 | 400         | VALIDATION_ERROR | Field-level validation failure       |
 
 ## Error response examples
@@ -56,13 +56,7 @@ Validation failures are mapped to standard HTTP status codes.
 {
 	"error": {
 	    "code": "VALIDATION_ERROR",
-	    "message": "One or more fields failed validation.",
-	    "details": [
-		    {
-		        "field": "startTime",
-		        "issue": "startTime must be earlier than endTime"
-			}
-	    ]
+	    "message": "Maximum length is 255 characters"
     }
 }
 ```
