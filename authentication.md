@@ -64,21 +64,29 @@ The API uses standard HTTP status codes to indicate authentication and authoriza
 
 | **Status Code** | Error code         | **Description**                      |
 | --------------- | ------------------ | ------------------------------------ |
+| 400             | INVALID_REQUEST    | Missing or invalid required field   |
 | 401             | UNAUTHORIZED       | Missing or invalid access token      |
+| 401             | TOKEN_EXPIRED      | Expired access token                 |
 | 403             | INSUFFICIENT_SCOPE | Missing required authorization scope |
 
-## Error response examples
+> Full list of error codes and messages is in the [Error page](https://github.com/alexaprotasovaa-coder/Smart-Meeting-Room-Booking-API-Documentation/blob/docs-update/errors.md#error-lifecycle)
+
+## Error request and response examples
 
 **Missing token:**
+```HTTP
+HTTP/1.1 401 Unauthorized
+Content-Type: application/json
+```
 ```json
  {
 	"error": {
 		"code": "UNAUTHORIZED",
-	    "message": "Access token is missing or invalid."
+	    "message": "Access token is missing or invalid"
 	}
 }
 ```
-> A valid token does not guarantee access; the required scope must be present.
+> A valid token does not guarantee access; the required scope must be present
 
 **Expired token:**
 ```HTTP
@@ -89,7 +97,7 @@ Content-Type: application/json
 {
 	"error": {
 	    "code": "TOKEN_EXPIRED",
-	    "message": "The access token has expired. Please obtain a new token and retry the request."
+	    "message": "The access token has expired. Please obtain a new token and retry the request"
 	}
 }
 ```
@@ -103,7 +111,7 @@ Content-Type: application/json
 {
 	"error": {
 		"code": "INSUFFICIENT_SCOPE",
-		"message": "The access token does not include the required scope: bookings:write."
+		"message": "The access token does not include the required scope: bookings:write"
 	}
 }
 ```
@@ -117,12 +125,17 @@ curl -X POST https://api.smart-meeting-room-booking.com/bookings \
   -d '{"roomId": "", "startTime": "", "endTime": ""}'
 ```
 Response
+```HTTP
+HTTP/1.1 400 Invalid request
+Content-Type: application/json
+```
 ```json
 {
   "error": {
     "code": "INVALID_REQUEST",
-    "message": "Required fields are missing or invalid: roomId, startTime, endTime."
+    "message": "Required fields are missing or invalid: roomId, startTime, endTime"
   }
 }
 ```
 
+→ Read next [Validation rules](https://github.com/alexaprotasovaa-coder/Smart-Meeting-Room-Booking-API-Documentation/blob/docs-update/validation-rules.md)

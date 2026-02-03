@@ -1,7 +1,7 @@
 **On this page:**
 Сore domain concepts used throughout the **Smart Meeting Room Booking API**.
 
-## **Booking**
+## Booking
 
 A **booking** represents a reservation of a meeting room for a specific time range.
 
@@ -13,7 +13,7 @@ A **booking** represents a reservation of a meeting room for a specific time ran
 
 A booking exists only within its defined time range and does not extend beyond it.
 
-## **Room**
+## Room
 
 A **room** is a physical or virtual meeting space that can be reserved.
 
@@ -24,7 +24,7 @@ A **room** is a physical or virtual meeting space that can be reserved.
 
 Room properties are used to determine whether a booking can be created or accepted.
 
-## **Time range**
+## Time range
 
 A **time range** defines the period during which a booking is active.
 
@@ -35,7 +35,7 @@ A **time range** defines the period during which a booking is active.
 
 All time ranges are evaluated consistently to determine availability and conflicts.
 
-## **Availability**
+## Availability
 
 **Availability** describes whether a room can be booked for a given time range.
 
@@ -45,7 +45,7 @@ All time ranges are evaluated consistently to determine availability and conflic
 
 Availability is evaluated dynamically based on existing bookings and time rules.
 
-## **Conflict**
+## Conflict
 
 A **conflict** occurs when two or more bookings attempt to reserve the same room for overlapping time ranges.
 
@@ -56,7 +56,7 @@ A **conflict** occurs when two or more bookings attempt to reserve the same room
 
 Conflict detection ensures exclusive access to rooms.
 
-## **Priority**
+## Priority
 
 **Priority** represents the relative importance of a booking request.
 
@@ -65,7 +65,7 @@ Conflict detection ensures exclusive access to rooms.
 - Is used to resolve competing booking requests
 - Influences booking decisions when conflicts occur 
 
-## **Client**
+## Client
 
 
 A **Client** is an application or system that interacts with the API on behalf of a user or organisation.
@@ -81,3 +81,17 @@ A **Client** is an application or system that interacts with the API on behalf o
 - An internal service or integration
 
 All API interactions are performed by clients, not end users directly.
+
+## Capacity
+
+Capacity defines the maximum number of participants a room can accommodate.
+
+**Features:**
+- Is associated with a specific room
+- Limits the number of participants in a booking
+- Is used to validate booking requests before creation
+- Exceeding a room’s capacity results in a CAPACITY_EXCEEDED error
+
+Capacity ensures that bookings are feasible and safe for the intended number of attendees.
+
+→ Read next [Authentication](https://github.com/alexaprotasovaa-coder/Smart-Meeting-Room-Booking-API-Documentation/blob/docs-update/authentication.md)

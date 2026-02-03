@@ -41,15 +41,20 @@ Common errors apply across all API operations.
 |---|---|---|
 |400|INVALID_REQUEST|Malformed or invalid request payload|
 |400|MISSING_REQUIRED_DATA|Required fields are missing|
+|400|VALIDATION_ERROR|Field-level validation failure|
 |401|UNAUTHORIZED|Missing or invalid access token|
+|401|TOKEN_EXPIRED|Expired access token|
 |403|FORBIDDEN|Access is not permitted|
+|403|INSUFFICIENT_SCOPE|Missing required authorization scope|
 |404|RESOURCE_NOT_FOUND|Requested resource does not exist|
 |429|RATE_LIMIT_EXCEEDED|Request rate limit exceeded|
 |500|INTERNAL_SERVER_ERROR|Unexpected server-side error|
 
 ## Domain-specific errors
  
-Domain-specific errors reflect booking logic, policies, and time constraints.
+> [Domain-specific errors]
+> - Reflect booking logic, policies, and time constraints
+> - Are returned only after successful validation and authorization
 
 |**Status code**|**Error code**|**Description**|
 |---|---|---|
@@ -58,8 +63,7 @@ Domain-specific errors reflect booking logic, policies, and time constraints.
 |409|TIME_CONFLICT|Booking conflicts with an existing booking|
 |409|TOO_LATE_TO_CANCEL|Cancellation attempted too close to start time|
 |422|INVALID_TIME_RANGE|Time range is logically invalid|
-
-> Domain-specific errors are returned only after successful validation and authorization
+|422|CAPACITY_EXCEEDED|Number of participants exceeds room capacity|
 
 ## Error examples
 
@@ -109,10 +113,4 @@ Domain-specific errors reflect booking logic, policies, and time constraints.
 }
 ```
 
-## Error handling principles
-
-- Errors are deterministic and repeatable for the same request
-- Only one error is returned per request
-- Validation errors take precedence over business rules
-- Business rule errors take precedence over conflict resolution
-- Error codes are stable and backward-compatible
+→ Read next [Changelog](сhangelog.md)

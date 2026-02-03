@@ -76,7 +76,7 @@ Find all available rooms
 ```
 Client
    |
-   |  GET /bookings
+   |  GET /rooms
    ▼
   API
    |	Validate token
@@ -96,3 +96,6 @@ The **Smart Meeting Room Booking API** uses an **external IdP** for authenticati
 
 Authentication is required.
 See [Authentication](authentication.md) for details.
+
+
+→ Read next [Getting started](getting-started.md)
