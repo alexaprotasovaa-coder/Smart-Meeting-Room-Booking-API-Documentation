@@ -49,9 +49,9 @@ Availability is evaluated dynamically based on existing bookings and time rules.
 
 A **conflict** occurs when two or more bookings attempt to reserve the same room for overlapping time ranges.
 
-**Conflicts:**
-- Are evaluated per room
-- Are determined solely by time range overlap
+**Features:**
+- Is evaluated per room
+- Is determined solely by time range overlap
 - Prevent simultaneous use of the same room
 
 Conflict detection ensures exclusive access to rooms.
